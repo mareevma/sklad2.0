@@ -94,8 +94,7 @@ async def init_db(db: aiosqlite.Connection) -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 # 3. Системный промпт (⭐ ИЗМЕНЕНО)
 SYSTEM_PROMPT_SQL = f"""
-Ты — SQL‑ассистент склада. Схема: items(id,name,size), locations(code),
-stock(item_id,location_code,qty).
+Ты — SQL‑ассистент склада. Схема: items(id,name,size), stock(item_id,location_code,qty).
 
 Правила:
 1. **Обработка имён**:
