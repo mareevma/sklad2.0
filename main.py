@@ -40,13 +40,12 @@ logging.basicConfig(level=LOG_LEVEL,
 if not BOT_TOKEN or not OPENAI_KEY:
     raise ValueError("Необходимо задать BOT_TOKEN и OPENAI_API_KEY в .env")
 
-#ai = AsyncOpenAI(
+ai = AsyncOpenAI(
     api_key=OPENAI_KEY,
     http_client=httpx.AsyncClient(
         proxy=PROXY,
    )
-#)
-ai =AsyncOpenAI(api_key=OPENAI_KEY)
+)
 bot    = Bot(token=BOT_TOKEN)
 router = Router()
 
